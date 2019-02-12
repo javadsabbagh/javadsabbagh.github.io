@@ -2,18 +2,19 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
+
 # Site
-title: Hexo
+title: KodNuts!
 subtitle:
-description:
+description: Kodnuts blog of interesting articles about software development, open source, IT trends.
 keywords:
-author: John Doe
+author: Javad Sabbagh
 language:
-timezone:
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://javadsabbagh.github.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -78,4 +79,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:javadsabbagh/javadsabbagh.github.io.git
+  branch: master
