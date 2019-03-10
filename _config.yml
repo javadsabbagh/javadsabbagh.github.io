@@ -81,4 +81,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/javadsabbagh/javadsabbagh.github.io
-  branch: master
+  branch: gh-pages
