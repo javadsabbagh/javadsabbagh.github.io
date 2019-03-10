@@ -4,9 +4,9 @@
 
 
 # Site
-title: KodNuts!
+title: Kodnuts
 subtitle:
-description: Kodnuts blog of interesting articles about software development, open source, IT trends.
+description: A blog of interesting articles about software development, open source, IT trends.
 keywords:
 author: Javad Sabbagh
 language:
@@ -81,4 +81,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/javadsabbagh/javadsabbagh.github.io
-  branch: gh-pages
+  branch: master # For user/organization pages it can only be 'master'. For projects it can also be 'gh-pages' branch.
