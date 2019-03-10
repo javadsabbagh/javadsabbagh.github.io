@@ -74,11 +74,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:javadsabbagh/javadsabbagh.github.io.git
+  repo: https://github.com/javadsabbagh/javadsabbagh.github.io
   branch: master
