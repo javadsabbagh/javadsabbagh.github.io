@@ -81,4 +81,4 @@ theme: icarus
 deploy:
   type: git
   repo: https://github.com/javadsabbagh/javadsabbagh.github.io
-  branch: master # For user/organization pages it can only be 'master'. For projects it can also be 'gh-pages' branch.
+  branch: master # For user/organization pages it can be only 'master' branch. For projects it can be also 'gh-pages' branch or 'docs' folder on master branch.

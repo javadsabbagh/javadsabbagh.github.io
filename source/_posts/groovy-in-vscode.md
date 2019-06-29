@@ -1,19 +1,19 @@
 ---
-title: Groovy Setup
+title: Groovy in VSCode
 date: 2019-06-23 15:54:58
 tags: [groovy, vscode]
 categories:
 - [groovy]
 ---
 
-## VSCode
+### Introduction
 You can use VSCode as an **Editor**, but not an **~~IDE~~**, for writing and running groovy scripts. In this regard, you need following extensions:
 - code-groovy extension by Marlon Franca
 - Code Runner extension by formulahendry.code-runner
 
 Now, you can create groovy files of .groovy extension and run them by right clicking in file editor and selecting 'code runner' menu item.
 
-### Code Runner
+### Config Code Runner
 You should put groovy location in environment PATH, otherwise you need to config code runner and set the application path explicitly:
 - press "Ctrl + ," to open settings window
 - Search for "Code runner config"
