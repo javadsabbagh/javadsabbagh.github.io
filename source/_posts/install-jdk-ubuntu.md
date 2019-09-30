@@ -20,7 +20,7 @@ sudo update-alternatives --install /usr/bin/java java /opt/java/jdk-11-linux-x64
 Outputs:
 java 100
 
-3. Choosing between installed java programms:
+3. Choosing between installed java programs:
 ```sh
 sudo update-alternatives --config java
 ```
