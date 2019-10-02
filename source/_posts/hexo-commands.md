@@ -9,6 +9,11 @@ tags: [hexo, blogging]
 hexo new post <post-file-name>
 ```
 
+- Running local server
+```bash
+hexo server
+```
+
 - Deploy to github server
 ```bash
 hexo generate && hexo deploy
