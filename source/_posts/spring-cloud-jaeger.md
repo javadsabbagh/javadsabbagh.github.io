@@ -8,7 +8,7 @@ categories:
 
 Jaeger is an implementation of OpenTracing API which is written in go hence has a very good performance. The other well-known implementation is Zipkin which is developed by Netflix in Java.
 
-## 1. Running jaeger server
+1. Running jaeger server
 ```sh
 docker run -d --name jaeger \
   -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \
@@ -21,7 +21,7 @@ docker run -d --name jaeger \
   -p 9411:9411 \
   jaegertracing/all-in-one
 ```
-## 2. Adding jaeger support to spring cloud
+2. Adding jaeger support to spring cloud
 Add this dependency into the pom.xml:
 ```xml
         <!-- OpenTracing Tracing & Jaeger -->
@@ -52,7 +52,7 @@ Add this dependency into the pom.xml:
         </dependency>
 ```
 
-## 3. Create configuration bean
+3. Create configuration bean
 
 ```java
 import io.jaegertracing.internal.samplers.ProbabilisticSampler;
