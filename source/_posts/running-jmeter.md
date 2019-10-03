@@ -23,7 +23,7 @@ Test result in web format will be generated in result_dir.
 - -H [your proxy server] 
 - -P [your proxy server port]
 
-For viewing different styles of calling jmeter, issue this command:
+For viewing different styles of running jmeter, issue this command:
 ```bash
 jmeter -help
 ```

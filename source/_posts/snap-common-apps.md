@@ -4,9 +4,14 @@ date: 2019-10-02 15:47:20
 tags: [linux]
 ---
 
-- vs code
+- VS Code
 ```bash
-sudp snap install code
+sudo snap install code
+```
+
+- 
+```bash
+sudo snap install gtk-common-themes
 ```
 
 - Gitkraken
