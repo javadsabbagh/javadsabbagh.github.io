@@ -4,6 +4,8 @@ date: 2019-10-02 15:47:20
 tags: [linux]
 ---
 
+
+### Install Apps
 - VS Code
 ```bash
 sudo snap install code
@@ -28,3 +30,36 @@ sudo snap install skype --classic
 ```bash
 sudo snap install microk8s --classic
 ```
+
+- Sublime
+```bash
+sudo snap install  sublime-text --classic
+```
+
+#### Update app
+```bash
+snap refresh gitkraken
+```
+
+### List installed apps
+```bash
+snap list
+```
+
+### List snap services
+```bash
+snap services 
+```
+
+### Search for an app
+```bash
+snap search microk8s
+```
+
+### Manage snap service
+```bash
+ sudo systemctl start snapd
+ sudo systemctl enable snapd
+ sudo systemctl status snap
+ sudo systemctl stop snap
+ ```
