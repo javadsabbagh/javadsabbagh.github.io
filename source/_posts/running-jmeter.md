@@ -4,9 +4,9 @@ date: 2019-10-02 15:03:06
 tags: [jmeter, testing]
 ---
 
-Running jmeter from command line is mostly needed for two ain reasons:
+Running jmeter from command line is mostly needed for two main reasons:
 - running jmeter tests from a CI tool, e.g jenkins
-- running jmeter locally without gui overhead
+- running jmeter remotely on a server. In this case gui overhead is not desired, though many servers run in only text mode.
 
 ```bash
 jmeter -n -t test_file.jmx -l test_result.csv -e -o result_dir -j test_output.log
