@@ -9,8 +9,8 @@ For creating redis cluster you need at least three master nodes. Cluster topolgy
 
 
 ## Different clustering options
-1. redis-cli
-2. ruby
+1. redis-cli (redis 5 onwards)
+2. ruby (redis 3,4)
 
 ## Running redis nodes
 We run redis instances in Docker containers, then:
@@ -156,3 +156,4 @@ docker run -it --rm --net=host redis redis-cli -c -h 192.168.100.117 -p 6380
 "javad"
 ```
  As you see, redis-cli does the burdon of connecting to proper remote server, fetching, and returning the result.
+ 

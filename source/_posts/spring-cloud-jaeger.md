@@ -1,7 +1,7 @@
 ---
 title: Spring Cloud with Jaeger
 date: 2019-09-30 13:08:29
-tags: [spring-cloud, jaeger]
+tags: [spring-cloud, jaeger, tracing]
 categories:
 - [spring]
 ---
