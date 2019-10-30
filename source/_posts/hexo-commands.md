@@ -18,3 +18,10 @@ hexo server
 ```bash
 hexo generate && hexo deploy
 ```
+
+- Add RTL support to your articles:
+ - Use *directions: rtl* option in header section, not recommended
+ - Wrap your paragraph with  html tag.
+ ```html 
+ <p dir='rtl' style="background-color: blue;"></p> 
+ ```

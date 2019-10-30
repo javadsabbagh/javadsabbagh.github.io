@@ -58,3 +58,14 @@ Add its dependency in pom.xml:
         <version>5.3</version>
     </dependency>
 ```
+
+Add to spring-boot property file (bootstrap.properties):
+
+```ini
+logback.path=${user.dir}/log
+logback.maxFileSize=100MB
+logback.maxHistory=150
+logback.root.level=INFO
+logback.file.level=INFO
+logback.fileName=clr-returned
+```
