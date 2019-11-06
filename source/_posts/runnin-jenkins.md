@@ -1,8 +1,8 @@
 ---
 title: Runnin Jenkins
 date: 2019-07-10 15:47:20
-tags: [jenkins]
-categories: [CI-CD]
+tags: [jenkins, CI-CD]
+categories: [DevOps]
 ---
 
 Download the lastest [jenkins.war](https://jenkins.io/download/) file and run it as following:

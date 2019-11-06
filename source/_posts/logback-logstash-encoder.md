@@ -3,7 +3,7 @@ title: Logstash encoder for Logback
 date: 2019-10-23 17:04:47
 tags: [java, logging]
 categories:
-- java
+- Java
 ---
 
 Create *src/resources/logback.xml* file:

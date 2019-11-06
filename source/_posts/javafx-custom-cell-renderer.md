@@ -3,7 +3,7 @@ title: JavaFX Custom Cell Renderer
 date: 2019-10-07 09:03:01
 tags: [javafx]
 categories:
-- [java]
+- [Java]
 ---
 
 Some useful links:
