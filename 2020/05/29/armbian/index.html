@@ -2,21 +2,22 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Tag: testing - A place for sharing ideas</title>
+<title>Armbian - A place for sharing ideas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="A blog of interesting articles about software development, open source, IT trends.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A place for sharing ideas">
-<meta property="og:url" content="http://javadsabbagh.github.com/tags/testing/index.html">
+    <meta name="description" content="Armbian documentation Board SettingOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinne">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Armbian">
+<meta property="og:url" content="http://javadsabbagh.github.com/2020/05/29/armbian/index.html">
 <meta property="og:site_name" content="A place for sharing ideas">
-<meta property="og:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta property="og:description" content="Armbian documentation Board SettingOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinne">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-05-29T15:07:32.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A place for sharing ideas">
-<meta name="twitter:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta name="twitter:title" content="Armbian">
+<meta name="twitter:description" content="Armbian documentation Board SettingOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinne">
 
 
 
@@ -88,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                <img src="/images/logo.svg" alt="Armbian" height="28">
             
             </a>
         </div>
@@ -134,29 +135,18 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">testing</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-02T11:33:06.000Z">2019-10-02</time>
+                <time class="level-item has-text-grey" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 416 words)
+                    a minute read (About 202 words)
                 </span>
                 
                 
@@ -165,30 +155,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/10/02/running-jmeter/">Running Jmeter</a>
+                Armbian
             
         </h1>
         <div class="content">
-            <p>Running jmeter from command line is mostly needed for two main reasons:</p>
-<ul>
-<li>running jmeter tests from a CI tool, e.g jenkins</li>
-<li>running jmeter remotely on a server. In this case gui overhead is not desired, though many servers run in only text mode.</li>
-</ul>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmeter -n -t test_file.jmx -l test_result.csv -e -o result_dir -j test_output.log</span><br></pre></td></tr></table></figure>
-<p>Test result in web format will be generated in result_dir.</p>
-<ul>
-<li>-n means non-gui mode</li>
-<li>-t test file</li>
-<li>[-p property-file]</li>
-<li>[-l results-file] </li>
-<li>[-j log-file] </li>
-<li>-g [csv results file] </li>
-<li>-e -o [Path to output folder] </li>
-<li>-H [your proxy server] </li>
-<li>-P [your proxy server port]</li>
-</ul>
-<p>For viewing different styles of running jmeter, issue this command:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmeter -<span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Jmeter-command-line-options"><a href="#Jmeter-command-line-options" class="headerlink" title="Jmeter command-line options"></a>Jmeter command-line options</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">--?</span><br><span class="line">	<span class="hljs-built_in">print</span> <span class="hljs-built_in">command</span> line options and <span class="hljs-built_in">exit</span></span><br><span class="line">-h, --<span class="hljs-built_in">help</span></span><br><span class="line">	<span class="hljs-built_in">print</span> usage information and <span class="hljs-built_in">exit</span></span><br><span class="line">-v, --version</span><br><span class="line">	<span class="hljs-built_in">print</span> the version information and <span class="hljs-built_in">exit</span></span><br><span class="line">-p, --propfile &lt;argument&gt;</span><br><span class="line">	the jmeter property file to use</span><br><span class="line">-q, --addprop &lt;argument&gt;</span><br><span class="line">	additional JMeter property file(s)</span><br><span class="line">-t, --testfile &lt;argument&gt;</span><br><span class="line">	the jmeter <span class="hljs-built_in">test</span>(.jmx) file to run. <span class="hljs-string">"-t LAST"</span> will load last </span><br><span class="line">	used file</span><br><span class="line">-l, --logfile &lt;argument&gt;</span><br><span class="line">	the file to <span class="hljs-built_in">log</span> samples to</span><br><span class="line">-i, --jmeterlogconf &lt;argument&gt;</span><br><span class="line">	jmeter logging configuration file (log4j2.xml)</span><br><span class="line">-j, --jmeterlogfile &lt;argument&gt;</span><br><span class="line">	jmeter run <span class="hljs-built_in">log</span> file (jmeter.log)</span><br><span class="line">-n, --nongui</span><br><span class="line">	run JMeter <span class="hljs-keyword">in</span> nongui mode</span><br><span class="line">-s, --server</span><br><span class="line">	run the JMeter server</span><br><span class="line">-E, --proxyScheme &lt;argument&gt;</span><br><span class="line">	Set a proxy scheme to use <span class="hljs-keyword">for</span> the proxy server</span><br><span class="line">-H, --proxyHost &lt;argument&gt;</span><br><span class="line">	Set a proxy server <span class="hljs-keyword">for</span> JMeter to use</span><br><span class="line">-P, --proxyPort &lt;argument&gt;</span><br><span class="line">	Set proxy server port <span class="hljs-keyword">for</span> JMeter to use</span><br><span class="line">-N, --nonProxyHosts &lt;argument&gt;</span><br><span class="line">	Set nonproxy host list (e.g. *.apache.org|localhost)</span><br><span class="line">-u, --username &lt;argument&gt;</span><br><span class="line">	Set username <span class="hljs-keyword">for</span> proxy server that JMeter is to use</span><br><span class="line">-a, --password &lt;argument&gt;</span><br><span class="line">	Set password <span class="hljs-keyword">for</span> proxy server that JMeter is to use</span><br><span class="line">-J, --jmeterproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define additional JMeter properties</span><br><span class="line">-G, --globalproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define Global properties (sent to servers)</span><br><span class="line">	e.g. -Gport=123</span><br><span class="line">	 or -Gglobal.properties</span><br><span class="line">-D, --systemproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define additional system properties</span><br><span class="line">-S, --systemPropertyFile &lt;argument&gt;</span><br><span class="line">	additional system property file(s)</span><br><span class="line">-f, --forceDeleteResultFile</span><br><span class="line">	force delete existing results files and web report folder <span class="hljs-keyword">if</span></span><br><span class="line">	 present before starting the <span class="hljs-built_in">test</span></span><br><span class="line">-L, --loglevel &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	[category=]level e.g. jorphan=INFO, jmeter.util=DEBUG or com</span><br><span class="line">	.example.foo=WARN</span><br><span class="line">-r, --runremote</span><br><span class="line">	Start remote servers (as defined <span class="hljs-keyword">in</span> remote_hosts)</span><br><span class="line">-R, --remotestart &lt;argument&gt;</span><br><span class="line">	Start these remote servers (overrides remote_hosts)</span><br><span class="line">-d, --homedir &lt;argument&gt;</span><br><span class="line">	the jmeter home directory to use</span><br><span class="line">-X, --remoteexit</span><br><span class="line">	Exit the remote servers at end of <span class="hljs-built_in">test</span> (non-GUI)</span><br><span class="line">-g, --reportonly &lt;argument&gt;</span><br><span class="line">	generate report dashboard only, from a <span class="hljs-built_in">test</span> results file</span><br><span class="line">-e, --reportatendofloadtests</span><br><span class="line">	generate report dashboard after load <span class="hljs-built_in">test</span></span><br><span class="line">-o, --reportoutputfolder &lt;argument&gt;</span><br><span class="line">	output folder <span class="hljs-keyword">for</span> report dashboard</span><br></pre></td></tr></table></figure>
+            <h2 id="Armbian-documentation"><a href="#Armbian-documentation" class="headerlink" title="Armbian documentation"></a>Armbian documentation</h2><p><a href="https://docs.armbian.com/" target="_blank" rel="noopener"></a></p>
+<h2 id="Board-Setting"><a href="#Board-Setting" class="headerlink" title="Board Setting"></a>Board Setting</h2><p>Our board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.</p>
+<blockquote>
+<p><strong>Note</strong><br>There are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one of them.</p>
+</blockquote>
+<h2 id="What-is-Armbian"><a href="#What-is-Armbian" class="headerlink" title="What is Armbian?"></a>What is Armbian?</h2><p>Armbian is a lightweight Linux distor (based on Debian or Ubuntu) with XFCE desktop for ARM processors.</p>
+<h2 id="Write-Armbian-on-SD-Card"><a href="#Write-Armbian-on-SD-Card" class="headerlink" title="Write Armbian on SD-Card"></a>Write Armbian on SD-Card</h2><p>Prepare SD card (four methodes):</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zcat Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz | pv | dd of=/dev/mmcblkX bs=1M</span><br><span class="line">dd <span class="hljs-keyword">if</span>=Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img of=/dev/mmcblkX bs=1M </span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz -d /dev/mmcblkX</span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img -d /dev/mmcblkX</span><br></pre></td></tr></table></figure>
+<h2 id="Change-settings"><a href="#Change-settings" class="headerlink" title="Change settings"></a>Change settings</h2><p>You should modify following file:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/boot/armbianEnv.text</span><br></pre></td></tr></table></figure></p>
+<h2 id="Look-at-CPU-temperature"><a href="#Look-at-CPU-temperature" class="headerlink" title="Look at CPU temperature"></a>Look at CPU temperature</h2><p>Proprt cooling is need for boards with A64 processors. Keep eye on CPU usage by command:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo armbianmonitor -r</span><br></pre></td></tr></table></figure></p>
+<h2 id="Remove-CPU-frequency-limit-for-H6"><a href="#Remove-CPU-frequency-limit-for-H6" class="headerlink" title="Remove CPU frequency limit for H6"></a>Remove CPU frequency limit for H6</h2><p>Default setting for CPU frequency is as follows:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CPU configuration: 480000 - 1810000 with ondemand</span><br></pre></td></tr></table></figure>
+<p>The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing /etc/default/cpufrequtils and set MAX_SPEED to 1810000.</p>
 
         </div>
         
@@ -201,7 +184,26 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/29/armbian-orangepione-qemu/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">armbian-orangepione-qemu</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/29/setup-qemu-aarch64/">
+                <span class="level-item">Setup QEMU for ARM 64</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -1451,7 +1453,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                    <img src="/images/logo.svg" alt="Armbian" height="28">
                 
                 </a>
                 <p class="is-size-7">

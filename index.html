@@ -140,6 +140,99 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 0 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/05/29/armbian-orangepione-qemu/">armbian-orangepione-qemu</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 202 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/05/29/armbian/">Armbian</a>
+            
+        </h1>
+        <div class="content">
+            <h2 id="Armbian-documentation"><a href="#Armbian-documentation" class="headerlink" title="Armbian documentation"></a>Armbian documentation</h2><p><a href="https://docs.armbian.com/" target="_blank" rel="noopener"></a></p>
+<h2 id="Board-Setting"><a href="#Board-Setting" class="headerlink" title="Board Setting"></a>Board Setting</h2><p>Our board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.</p>
+<blockquote>
+<p><strong>Note</strong><br>There are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one of them.</p>
+</blockquote>
+<h2 id="What-is-Armbian"><a href="#What-is-Armbian" class="headerlink" title="What is Armbian?"></a>What is Armbian?</h2><p>Armbian is a lightweight Linux distor (based on Debian or Ubuntu) with XFCE desktop for ARM processors.</p>
+<h2 id="Write-Armbian-on-SD-Card"><a href="#Write-Armbian-on-SD-Card" class="headerlink" title="Write Armbian on SD-Card"></a>Write Armbian on SD-Card</h2><p>Prepare SD card (four methodes):</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zcat Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz | pv | dd of=/dev/mmcblkX bs=1M</span><br><span class="line">dd <span class="hljs-keyword">if</span>=Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img of=/dev/mmcblkX bs=1M </span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz -d /dev/mmcblkX</span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img -d /dev/mmcblkX</span><br></pre></td></tr></table></figure>
+<h2 id="Change-settings"><a href="#Change-settings" class="headerlink" title="Change settings"></a>Change settings</h2><p>You should modify following file:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/boot/armbianEnv.text</span><br></pre></td></tr></table></figure></p>
+<h2 id="Look-at-CPU-temperature"><a href="#Look-at-CPU-temperature" class="headerlink" title="Look at CPU temperature"></a>Look at CPU temperature</h2><p>Proprt cooling is need for boards with A64 processors. Keep eye on CPU usage by command:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo armbianmonitor -r</span><br></pre></td></tr></table></figure></p>
+<h2 id="Remove-CPU-frequency-limit-for-H6"><a href="#Remove-CPU-frequency-limit-for-H6" class="headerlink" title="Remove CPU frequency limit for H6"></a>Remove CPU frequency limit for H6</h2><p>Default setting for CPU frequency is as follows:</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CPU configuration: 480000 - 1810000 with ondemand</span><br></pre></td></tr></table></figure>
+<p>The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing /etc/default/cpufrequtils and set MAX_SPEED to 1810000.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-29T08:39:48.000Z">2020-05-29</time>
                 
                 <div class="level-item">
@@ -150,7 +243,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 82 words)
+                    2 minutes read (About 337 words)
                 </span>
                 
                 
@@ -163,13 +256,31 @@
             
         </h1>
         <div class="content">
-            <p>We cannot virtualize ARM on x86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU.</p>
-<h2 id="Setup-QEMU-for-ARM-64-aarch64"><a href="#Setup-QEMU-for-ARM-64-aarch64" class="headerlink" title="Setup QEMU for ARM 64 (aarch64)"></a>Setup QEMU for ARM 64 (aarch64)</h2><h3 id="1-Installing-QEMU"><a href="#1-Installing-QEMU" class="headerlink" title="1. Installing QEMU"></a>1. Installing QEMU</h3><p>The reason for building from source is that we are going to have the latest release!</p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-5.0.0.tar.xz</span><br><span class="line">tar xvJf qemu-5.0.0.tar.xz</span><br><span class="line"><span class="hljs-built_in">cd</span> qemu-5.0.0</span><br><span class="line">./configure</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
-<p>Binary we are going to use:<br>qemu-syste-aarch64</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li><a href="https://www.youtube.com/watch?v=zK2Agg3U2cU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=zK2Agg3U2cU</a></li>
-</ul>
+            <blockquote>
+<p><strong>Note</strong><br>ARM 64 architecture is also known as, aarch64.</p>
+</blockquote>
+<h2 id="1-Why-we-need-QEMU"><a href="#1-Why-we-need-QEMU" class="headerlink" title="1. Why we need QEMU?"></a>1. Why we need QEMU?</h2><p>We cannot virtualize ARM on X86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU.</p>
+<h2 id="2-QEMU-and-Hypervisors"><a href="#2-QEMU-and-Hypervisors" class="headerlink" title="2. QEMU and Hypervisors"></a>2. QEMU and Hypervisors</h2><p>QEMU can be used by virtualization hypervisors such as XEN and KVM. Hypervisors, underneath, can manage QEMU access to system resources.</p>
+<h2 id="3-Building-QEMU-for-ARM-64-aarch64"><a href="#3-Building-QEMU-for-ARM-64-aarch64" class="headerlink" title="3. Building QEMU for ARM 64 (aarch64)"></a>3. Building QEMU for ARM 64 (aarch64)</h2><h3 id="3-1-Buidling-from-the-source"><a href="#3-1-Buidling-from-the-source" class="headerlink" title="3.1 Buidling from the source"></a>3.1 Buidling from the source</h3><p>The reason for building from source is that we are going to have the latest release!</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-5.0.0.tar.xz</span><br><span class="line">tar xvJf qemu-5.0.0.tar.xz</span><br><span class="line"><span class="hljs-built_in">cd</span> qemu-5.0.0</span><br><span class="line">mkdir  build &amp;&amp; <span class="hljs-built_in">cd</span> build</span><br><span class="line">../configure --target-list=aarch64-softmmu aarch64-linux-user</span><br><span class="line">make -j2</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-Build-Config"><a href="#3-2-Build-Config" class="headerlink" title="3.2 Build Config"></a>3.2 Build Config</h3><blockquote>
+<p><strong>Note</strong><br>If you don’t specify target-list it will compile and build QEMU for all available target  architectures. Which is unrelevant, because it takes a very long time and uses lots of disk space.</p>
+</blockquote>
+<p>To see available target architectures, run:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --<span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>Then have a look at available values for <strong><em>-target-list</em></strong> parameter.</p>
+<p>After successful build the output would be in following directory:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-Running-QEMU"><a href="#3-3-Running-QEMU" class="headerlink" title="3.3 Running QEMU"></a>3.3 Running QEMU</h3><p>Getting list of supported machines config:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64 -M <span class="hljs-built_in">help</span> | grep orange</span><br></pre></td></tr></table></figure>
+<p>It only shows <strong><em>orangepi-pc</em></strong> which is the version of Orange PI using Allwinner H3 (Cortex-A7) 32-bit ARM processor. It means that probably you cannot emulate for example boards with H6 chip with <strong><em>-M orangepi-pc</em></strong> option.</p>
+<p>However, if you run:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64 -cpu <span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>You see that cortex-a53, architecture implemented by Allwinner H6, is in the list. We try anothe options in [armbian-orangepi-qemu] post in this regard.</p>
+<h3 id="3-4-Good-to-consider"><a href="#3-4-Good-to-consider" class="headerlink" title="3.4 Good to consider"></a>3.4 Good to consider</h3><p>You noticed, that we have build <strong><em>aarch64-linux-user</em></strong> in the target list. I don’t know exactly what it does, maybe emulates ARM-64 programs as Linux User-Space applications.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-linux-user/qemu-aarch64 -cpu <span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>Shows that it support much less architectures:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Available CPUs:</span><br><span class="line">  cortex-a53</span><br><span class="line">  cortex-a57</span><br><span class="line">  cortex-a72</span><br><span class="line">  max</span><br></pre></td></tr></table></figure>
 
         </div>
         
@@ -602,94 +713,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-30T11:48:44.000Z">2019-10-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Java/">Java</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 5 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/30/javafx-gradle/">JavaFX with Gradle</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="gradle-build"><a href="#gradle-build" class="headerlink" title="gradle.build"></a>gradle.build</h2><figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line">## Run</span><br><span class="line">```sh</span><br></pre></td></tr></table></figure>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-30T10:00:10.000Z">2019-10-30</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 22 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/30/hexo-config/">Hexo Config</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="Add-RTL-support-to-your-articles"><a href="#Add-RTL-support-to-your-articles" class="headerlink" title="Add RTL support to your articles:"></a>Add RTL support to your articles:</h3><ol>
-<li><del>Use <strong>directions: rtl</strong> option in header section</del>, not recommended.</li>
-<li>Wrap your paragraph with html tag.<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">'rtl'</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-color: blue;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -756,7 +779,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        39
                     </p>
                 </div>
             </div>
@@ -776,7 +799,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        36
+                        37
                     </p>
                 </div>
             </div>
@@ -949,7 +972,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/CI-CD/" style="font-size: 10px;">CI-CD</a> <a href="/tags/JDK/" style="font-size: 10px;">JDK</a> <a href="/tags/QEMU/" style="font-size: 10px;">QEMU</a> <a href="/tags/blogging/" style="font-size: 20px;">blogging</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/groovy/" style="font-size: 10px;">groovy</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hibernate/" style="font-size: 10px;">hibernate</a> <a href="/tags/jaeger/" style="font-size: 10px;">jaeger</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javafx/" style="font-size: 20px;">javafx</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/jmeter/" style="font-size: 10px;">jmeter</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jwt/" style="font-size: 15px;">jwt</a> <a href="/tags/keycloak/" style="font-size: 20px;">keycloak</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/mxnet/" style="font-size: 15px;">mxnet</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 20px;">spring</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring-cloud</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/testing/" style="font-size: 10px;">testing</a> <a href="/tags/tracing/" style="font-size: 10px;">tracing</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a>
+        <a href="/tags/ARM/" style="font-size: 10px;">ARM</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI-CD</a> <a href="/tags/JDK/" style="font-size: 10px;">JDK</a> <a href="/tags/QEMU/" style="font-size: 10px;">QEMU</a> <a href="/tags/blogging/" style="font-size: 20px;">blogging</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/groovy/" style="font-size: 10px;">groovy</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hibernate/" style="font-size: 10px;">hibernate</a> <a href="/tags/jaeger/" style="font-size: 10px;">jaeger</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javafx/" style="font-size: 20px;">javafx</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/jmeter/" style="font-size: 10px;">jmeter</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jwt/" style="font-size: 15px;">jwt</a> <a href="/tags/keycloak/" style="font-size: 20px;">keycloak</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/mxnet/" style="font-size: 15px;">mxnet</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 20px;">spring</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring-cloud</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/testing/" style="font-size: 10px;">testing</a> <a href="/tags/tracing/" style="font-size: 10px;">tracing</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a>
     </div>
 </div>
 
@@ -963,6 +986,44 @@
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/05/29/armbian-orangepione-qemu/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="armbian-orangepione-qemu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time></div>
+                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">armbian-orangepione-qemu</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/05/29/armbian/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time></div>
+                    <a href="/2020/05/29/armbian/" class="has-link-black-ter is-size-6">Armbian</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1021,44 +1082,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/10/install-rocket.chat-server/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Installing Rocket.Chat Server">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-10T15:58:36.849Z">2020-04-10</time></div>
-                    <a href="/2020/04/10/install-rocket.chat-server/" class="has-link-black-ter is-size-6">Installing Rocket.Chat Server</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/06/ssh-port-forwarding/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="SSH Port Forwarding">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-06T07:41:20.000Z">2019-11-06</time></div>
-                    <a href="/2019/11/06/ssh-port-forwarding/" class="has-link-black-ter is-size-6">SSH Port Forwarding</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/shell/">shell</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1077,7 +1100,7 @@
                     <span class="level-item">May 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1182,6 +1205,13 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ARM/">
+                        <span class="tag">ARM</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CI-CD/">
@@ -1460,6 +1490,44 @@
         
         <article class="media">
             
+            <a href="/2020/05/29/armbian-orangepione-qemu/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="armbian-orangepione-qemu">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time></div>
+                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">armbian-orangepione-qemu</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/05/29/armbian/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time></div>
+                    <a href="/2020/05/29/armbian/" class="has-link-black-ter is-size-6">Armbian</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/05/29/setup-qemu-aarch64/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Setup QEMU for ARM 64">
@@ -1515,44 +1583,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/04/10/install-rocket.chat-server/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Installing Rocket.Chat Server">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-10T15:58:36.849Z">2020-04-10</time></div>
-                    <a href="/2020/04/10/install-rocket.chat-server/" class="has-link-black-ter is-size-6">Installing Rocket.Chat Server</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/11/06/ssh-port-forwarding/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="SSH Port Forwarding">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-06T07:41:20.000Z">2019-11-06</time></div>
-                    <a href="/2019/11/06/ssh-port-forwarding/" class="has-link-black-ter is-size-6">SSH Port Forwarding</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/shell/">shell</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1571,7 +1601,7 @@
                     <span class="level-item">May 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1676,6 +1706,13 @@
                 Tags
             </h3>
             <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/ARM/">
+                        <span class="tag">ARM</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
                 
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CI-CD/">

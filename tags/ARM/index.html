@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Tag: testing - A place for sharing ideas</title>
+<title>Tag: ARM - A place for sharing ideas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="description" content="A blog of interesting articles about software development, open source, IT trends.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="A place for sharing ideas">
-<meta property="og:url" content="http://javadsabbagh.github.com/tags/testing/index.html">
+<meta property="og:url" content="http://javadsabbagh.github.com/tags/ARM/index.html">
 <meta property="og:site_name" content="A place for sharing ideas">
 <meta property="og:description" content="A blog of interesting articles about software development, open source, IT trends.">
 <meta property="og:locale" content="default">
@@ -138,7 +138,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">testing</a></li>
+            <li class="is-active"><a href="#" aria-current="page">ARM</a></li>
         </ul>
         </nav>
     </div>
@@ -150,13 +150,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-02T11:33:06.000Z">2019-10-02</time>
+                <time class="level-item has-text-grey" datetime="2020-05-29T08:39:48.000Z">2020-05-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 416 words)
+                    2 minutes read (About 337 words)
                 </span>
                 
                 
@@ -165,30 +169,35 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/10/02/running-jmeter/">Running Jmeter</a>
+                <a class="has-link-black-ter" href="/2020/05/29/setup-qemu-aarch64/">Setup QEMU for ARM 64</a>
             
         </h1>
         <div class="content">
-            <p>Running jmeter from command line is mostly needed for two main reasons:</p>
-<ul>
-<li>running jmeter tests from a CI tool, e.g jenkins</li>
-<li>running jmeter remotely on a server. In this case gui overhead is not desired, though many servers run in only text mode.</li>
-</ul>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmeter -n -t test_file.jmx -l test_result.csv -e -o result_dir -j test_output.log</span><br></pre></td></tr></table></figure>
-<p>Test result in web format will be generated in result_dir.</p>
-<ul>
-<li>-n means non-gui mode</li>
-<li>-t test file</li>
-<li>[-p property-file]</li>
-<li>[-l results-file] </li>
-<li>[-j log-file] </li>
-<li>-g [csv results file] </li>
-<li>-e -o [Path to output folder] </li>
-<li>-H [your proxy server] </li>
-<li>-P [your proxy server port]</li>
-</ul>
-<p>For viewing different styles of running jmeter, issue this command:<br><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmeter -<span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="Jmeter-command-line-options"><a href="#Jmeter-command-line-options" class="headerlink" title="Jmeter command-line options"></a>Jmeter command-line options</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">--?</span><br><span class="line">	<span class="hljs-built_in">print</span> <span class="hljs-built_in">command</span> line options and <span class="hljs-built_in">exit</span></span><br><span class="line">-h, --<span class="hljs-built_in">help</span></span><br><span class="line">	<span class="hljs-built_in">print</span> usage information and <span class="hljs-built_in">exit</span></span><br><span class="line">-v, --version</span><br><span class="line">	<span class="hljs-built_in">print</span> the version information and <span class="hljs-built_in">exit</span></span><br><span class="line">-p, --propfile &lt;argument&gt;</span><br><span class="line">	the jmeter property file to use</span><br><span class="line">-q, --addprop &lt;argument&gt;</span><br><span class="line">	additional JMeter property file(s)</span><br><span class="line">-t, --testfile &lt;argument&gt;</span><br><span class="line">	the jmeter <span class="hljs-built_in">test</span>(.jmx) file to run. <span class="hljs-string">"-t LAST"</span> will load last </span><br><span class="line">	used file</span><br><span class="line">-l, --logfile &lt;argument&gt;</span><br><span class="line">	the file to <span class="hljs-built_in">log</span> samples to</span><br><span class="line">-i, --jmeterlogconf &lt;argument&gt;</span><br><span class="line">	jmeter logging configuration file (log4j2.xml)</span><br><span class="line">-j, --jmeterlogfile &lt;argument&gt;</span><br><span class="line">	jmeter run <span class="hljs-built_in">log</span> file (jmeter.log)</span><br><span class="line">-n, --nongui</span><br><span class="line">	run JMeter <span class="hljs-keyword">in</span> nongui mode</span><br><span class="line">-s, --server</span><br><span class="line">	run the JMeter server</span><br><span class="line">-E, --proxyScheme &lt;argument&gt;</span><br><span class="line">	Set a proxy scheme to use <span class="hljs-keyword">for</span> the proxy server</span><br><span class="line">-H, --proxyHost &lt;argument&gt;</span><br><span class="line">	Set a proxy server <span class="hljs-keyword">for</span> JMeter to use</span><br><span class="line">-P, --proxyPort &lt;argument&gt;</span><br><span class="line">	Set proxy server port <span class="hljs-keyword">for</span> JMeter to use</span><br><span class="line">-N, --nonProxyHosts &lt;argument&gt;</span><br><span class="line">	Set nonproxy host list (e.g. *.apache.org|localhost)</span><br><span class="line">-u, --username &lt;argument&gt;</span><br><span class="line">	Set username <span class="hljs-keyword">for</span> proxy server that JMeter is to use</span><br><span class="line">-a, --password &lt;argument&gt;</span><br><span class="line">	Set password <span class="hljs-keyword">for</span> proxy server that JMeter is to use</span><br><span class="line">-J, --jmeterproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define additional JMeter properties</span><br><span class="line">-G, --globalproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define Global properties (sent to servers)</span><br><span class="line">	e.g. -Gport=123</span><br><span class="line">	 or -Gglobal.properties</span><br><span class="line">-D, --systemproperty &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	Define additional system properties</span><br><span class="line">-S, --systemPropertyFile &lt;argument&gt;</span><br><span class="line">	additional system property file(s)</span><br><span class="line">-f, --forceDeleteResultFile</span><br><span class="line">	force delete existing results files and web report folder <span class="hljs-keyword">if</span></span><br><span class="line">	 present before starting the <span class="hljs-built_in">test</span></span><br><span class="line">-L, --loglevel &lt;argument&gt;=&lt;value&gt;</span><br><span class="line">	[category=]level e.g. jorphan=INFO, jmeter.util=DEBUG or com</span><br><span class="line">	.example.foo=WARN</span><br><span class="line">-r, --runremote</span><br><span class="line">	Start remote servers (as defined <span class="hljs-keyword">in</span> remote_hosts)</span><br><span class="line">-R, --remotestart &lt;argument&gt;</span><br><span class="line">	Start these remote servers (overrides remote_hosts)</span><br><span class="line">-d, --homedir &lt;argument&gt;</span><br><span class="line">	the jmeter home directory to use</span><br><span class="line">-X, --remoteexit</span><br><span class="line">	Exit the remote servers at end of <span class="hljs-built_in">test</span> (non-GUI)</span><br><span class="line">-g, --reportonly &lt;argument&gt;</span><br><span class="line">	generate report dashboard only, from a <span class="hljs-built_in">test</span> results file</span><br><span class="line">-e, --reportatendofloadtests</span><br><span class="line">	generate report dashboard after load <span class="hljs-built_in">test</span></span><br><span class="line">-o, --reportoutputfolder &lt;argument&gt;</span><br><span class="line">	output folder <span class="hljs-keyword">for</span> report dashboard</span><br></pre></td></tr></table></figure>
+            <blockquote>
+<p><strong>Note</strong><br>ARM 64 architecture is also known as, aarch64.</p>
+</blockquote>
+<h2 id="1-Why-we-need-QEMU"><a href="#1-Why-we-need-QEMU" class="headerlink" title="1. Why we need QEMU?"></a>1. Why we need QEMU?</h2><p>We cannot virtualize ARM on X86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU.</p>
+<h2 id="2-QEMU-and-Hypervisors"><a href="#2-QEMU-and-Hypervisors" class="headerlink" title="2. QEMU and Hypervisors"></a>2. QEMU and Hypervisors</h2><p>QEMU can be used by virtualization hypervisors such as XEN and KVM. Hypervisors, underneath, can manage QEMU access to system resources.</p>
+<h2 id="3-Building-QEMU-for-ARM-64-aarch64"><a href="#3-Building-QEMU-for-ARM-64-aarch64" class="headerlink" title="3. Building QEMU for ARM 64 (aarch64)"></a>3. Building QEMU for ARM 64 (aarch64)</h2><h3 id="3-1-Buidling-from-the-source"><a href="#3-1-Buidling-from-the-source" class="headerlink" title="3.1 Buidling from the source"></a>3.1 Buidling from the source</h3><p>The reason for building from source is that we are going to have the latest release!</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-5.0.0.tar.xz</span><br><span class="line">tar xvJf qemu-5.0.0.tar.xz</span><br><span class="line"><span class="hljs-built_in">cd</span> qemu-5.0.0</span><br><span class="line">mkdir  build &amp;&amp; <span class="hljs-built_in">cd</span> build</span><br><span class="line">../configure --target-list=aarch64-softmmu aarch64-linux-user</span><br><span class="line">make -j2</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-Build-Config"><a href="#3-2-Build-Config" class="headerlink" title="3.2 Build Config"></a>3.2 Build Config</h3><blockquote>
+<p><strong>Note</strong><br>If you don’t specify target-list it will compile and build QEMU for all available target  architectures. Which is unrelevant, because it takes a very long time and uses lots of disk space.</p>
+</blockquote>
+<p>To see available target architectures, run:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --<span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>Then have a look at available values for <strong><em>-target-list</em></strong> parameter.</p>
+<p>After successful build the output would be in following directory:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-Running-QEMU"><a href="#3-3-Running-QEMU" class="headerlink" title="3.3 Running QEMU"></a>3.3 Running QEMU</h3><p>Getting list of supported machines config:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64 -M <span class="hljs-built_in">help</span> | grep orange</span><br></pre></td></tr></table></figure>
+<p>It only shows <strong><em>orangepi-pc</em></strong> which is the version of Orange PI using Allwinner H3 (Cortex-A7) 32-bit ARM processor. It means that probably you cannot emulate for example boards with H6 chip with <strong><em>-M orangepi-pc</em></strong> option.</p>
+<p>However, if you run:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-softmmu/qemu-system-aarch64 -cpu <span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>You see that cortex-a53, architecture implemented by Allwinner H6, is in the list. We try anothe options in [armbian-orangepi-qemu] post in this regard.</p>
+<h3 id="3-4-Good-to-consider"><a href="#3-4-Good-to-consider" class="headerlink" title="3.4 Good to consider"></a>3.4 Good to consider</h3><p>You noticed, that we have build <strong><em>aarch64-linux-user</em></strong> in the target list. I don’t know exactly what it does, maybe emulates ARM-64 programs as Linux User-Space applications.</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aarch64-linux-user/qemu-aarch64 -cpu <span class="hljs-built_in">help</span></span><br></pre></td></tr></table></figure>
+<p>Shows that it support much less architectures:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Available CPUs:</span><br><span class="line">  cortex-a53</span><br><span class="line">  cortex-a57</span><br><span class="line">  cortex-a72</span><br><span class="line">  max</span><br></pre></td></tr></table></figure>
 
         </div>
         
