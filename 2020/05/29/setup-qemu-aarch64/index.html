@@ -2,21 +2,23 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Tag: tracing - A place for sharing ideas</title>
+<title>Setup QEMU for ARM 64 - A place for sharing ideas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="A blog of interesting articles about software development, open source, IT trends.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A place for sharing ideas">
-<meta property="og:url" content="http://javadsabbagh.github.com/tags/tracing/index.html">
+    <meta name="description" content="We cannot virtualize ARM on x86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU. Setup QEMU for ARM 64 (aarch64)1. Installing QEMUThe reason for building from source is tha">
+<meta name="keywords" content="QEMU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setup QEMU for ARM 64">
+<meta property="og:url" content="http://javadsabbagh.github.com/2020/05/29/setup-qemu-aarch64/index.html">
 <meta property="og:site_name" content="A place for sharing ideas">
-<meta property="og:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta property="og:description" content="We cannot virtualize ARM on x86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU. Setup QEMU for ARM 64 (aarch64)1. Installing QEMUThe reason for building from source is tha">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-05-29T09:18:08.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A place for sharing ideas">
-<meta name="twitter:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta name="twitter:title" content="Setup QEMU for ARM 64">
+<meta name="twitter:description" content="We cannot virtualize ARM on x86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU. Setup QEMU for ARM 64 (aarch64)1. Installing QEMUThe reason for building from source is tha">
 
 
 
@@ -88,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                <img src="/images/logo.svg" alt="Setup QEMU for ARM 64" height="28">
             
             </a>
         </div>
@@ -134,33 +136,22 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">tracing</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T09:38:29.000Z">2019-09-30</time>
+                <time class="level-item has-text-grey" datetime="2020-05-29T08:39:48.000Z">2020-05-29</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
+                <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 185 words)
+                    a few seconds read (About 82 words)
                 </span>
                 
                 
@@ -169,23 +160,27 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/09/30/spring-cloud-jaeger/">Spring Cloud with Jaeger</a>
+                Setup QEMU for ARM 64
             
         </h1>
         <div class="content">
-            <p>Jaeger is an implementation of OpenTracing API which is written in go hence has a very good performance. The other well-known implementation is Zipkin which is developed by Netflix in Java.</p>
-<ol>
-<li><p>Running jaeger server</p>
-<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name jaeger \</span><br><span class="line">  -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \</span><br><span class="line">  -p 5775:5775/udp \</span><br><span class="line">  -p 6831:6831/udp \</span><br><span class="line">  -p 6832:6832/udp \</span><br><span class="line">  -p 5778:5778 \</span><br><span class="line">  -p 16686:16686 \</span><br><span class="line">  -p 14268:14268 \</span><br><span class="line">  -p 9411:9411 \</span><br><span class="line">  jaegertracing/all-in-one</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Adding jaeger support to spring cloud<br>Add this dependency into the pom.xml:</p>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- OpenTracing Tracing &amp; Jaeger --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-spring-cloud-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.3.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- Exclude the modules that you don't want to trace or instrument --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-spring-cloud-jdbc-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-jms-1<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-jms-spring<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">exclusions</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.jaegertracing<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jaeger-client<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Create configuration bean</p>
-</li>
-</ol>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> io.jaegertracing.internal.samplers.ProbabilisticSampler;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TraceConfig</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-keyword">public</span> io.opentracing.<span class="hljs-function">Tracer <span class="hljs-title">tracer</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> io.jaegertracing.Configuration(<span class="hljs-string">"manger-dashboard"</span>)</span><br><span class="line">                .withSampler(<span class="hljs-keyword">new</span> io.jaegertracing.Configuration.SamplerConfiguration().withType(ProbabilisticSampler.TYPE).withParam(<span class="hljs-number">1</span>))</span><br><span class="line">                .withReporter(<span class="hljs-keyword">new</span> io.jaegertracing.Configuration.ReporterConfiguration())</span><br><span class="line">                .getTracer();</span><br><span class="line">        <span class="hljs-comment">//return new // tracer instance of your choice (Zipkin, Jaeger, LightStep)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>We cannot virtualize ARM on x86 machine, then wee need to emulate it. So, we need an emulator  such as QEMU.</p>
+<h2 id="Setup-QEMU-for-ARM-64-aarch64"><a href="#Setup-QEMU-for-ARM-64-aarch64" class="headerlink" title="Setup QEMU for ARM 64 (aarch64)"></a>Setup QEMU for ARM 64 (aarch64)</h2><h3 id="1-Installing-QEMU"><a href="#1-Installing-QEMU" class="headerlink" title="1. Installing QEMU"></a>1. Installing QEMU</h3><p>The reason for building from source is that we are going to have the latest release!</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://download.qemu.org/qemu-5.0.0.tar.xz</span><br><span class="line">tar xvJf qemu-5.0.0.tar.xz</span><br><span class="line"><span class="hljs-built_in">cd</span> qemu-5.0.0</span><br><span class="line">./configure</span><br><span class="line">make</span><br></pre></td></tr></table></figure>
+<p>Binary we are going to use:<br>qemu-syste-aarch64</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a href="https://www.youtube.com/watch?v=zK2Agg3U2cU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=zK2Agg3U2cU</a></li>
+</ul>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/QEMU/">QEMU</a>
+                </div>
+            </div>
         </div>
         
         
@@ -197,7 +192,19 @@
 
 
 
-
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/06/mxnet-iterators/">
+                <span class="level-item">Apache Mxnet Iterators</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -1433,7 +1440,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                    <img src="/images/logo.svg" alt="Setup QEMU for ARM 64" height="28">
                 
                 </a>
                 <p class="is-size-7">
