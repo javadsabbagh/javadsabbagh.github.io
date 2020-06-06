@@ -17,6 +17,14 @@ We cannot virtualize ARM on X86 machine, then wee need to emulate it. So, we nee
 
 QEMU can be used by virtualization hypervisors such as XEN and KVM. Hypervisors, underneath, can manage QEMU access to system resources.
 
+For more information please look: [KVM-QEMU-Libvirt](https://events19.linuxfoundation.org/wp-content/uploads/2017/12/Kashyap-Chamarthy_Effective-Virtual-CPU-Configuration-OSS-EU2018.pdf).
+
+### 2.1 LibVirt vs KVM
+
+Libvirt is a library which can be used to manage QEMU instances, like Vagrant which is used to create and manage VirtualBox machines. Its API can be called by OpenStack and etc.
+
+KVM is a hypervisor in Linux Kernel space and QEMU can be connected to it to get services regarding running machine resources.
+
 ## 3. Building QEMU for ARM 64 (aarch64)
 
 ### 3.1 Buidling from the source
@@ -28,9 +36,11 @@ wget https://download.qemu.org/qemu-5.0.0.tar.xz
 tar xvJf qemu-5.0.0.tar.xz
 cd qemu-5.0.0
 mkdir  build && cd build
-../configure --target-list=aarch64-softmmu aarch64-linux-user
+../configure --target-list=aarch64-softmmu,aarch64-linux-user
 make -j2
 ```
+
+> Target for regular (32 bit) ARM is : arm-softmmu
 
 ### 3.2 Build Config
 
@@ -67,11 +77,13 @@ However, if you run:
  aarch64-softmmu/qemu-system-aarch64 -cpu help
 ```
 
-You see that cortex-a53, architecture implemented by Allwinner H6, is in the list. We try anothe options in [armbian-orangepi-qemu] post in this regard.
+You see that cortex-a53, architecture implemented by Allwinner H6, is in the list. For that purpose, we will try another options in {% post_link armbian-orangepione-qemu Running Armbian on QEMU for OrangePi One Plus %} post.
 
 ### 3.4 Good to consider
 
 You noticed, that we have build ***aarch64-linux-user*** in the target list. I don't know exactly what it does, maybe emulates ARM-64 programs as Linux User-Space applications.
+
+Following command:
 
 ```bash
 aarch64-linux-user/qemu-aarch64 -cpu help
