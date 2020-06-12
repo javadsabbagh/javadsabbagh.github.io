@@ -2,21 +2,23 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>Category: spring - A place for sharing ideas</title>
+<title>Armbian Introduction - A place for sharing ideas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="A blog of interesting articles about software development, open source, IT trends.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A place for sharing ideas">
-<meta property="og:url" content="http://javadsabbagh.github.com/categories/spring/index.html">
+    <meta name="description" content="Armbian documentation Armbian Home Page  What is Armbian?Armbian is a lightweight Linux distro based on Debian or Ubuntu with XFCE desktop for ARM processors. Some default configsuser: rootpass: 1234">
+<meta name="keywords" content="Armbian,ARM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Armbian Introduction">
+<meta property="og:url" content="http://javadsabbagh.github.com/2020/05/29/armbian-introduction/index.html">
 <meta property="og:site_name" content="A place for sharing ideas">
-<meta property="og:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta property="og:description" content="Armbian documentation Armbian Home Page  What is Armbian?Armbian is a lightweight Linux distro based on Debian or Ubuntu with XFCE desktop for ARM processors. Some default configsuser: rootpass: 1234">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-05-29T23:01:08.967Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A place for sharing ideas">
-<meta name="twitter:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta name="twitter:title" content="Armbian Introduction">
+<meta name="twitter:description" content="Armbian documentation Armbian Home Page  What is Armbian?Armbian is a lightweight Linux distro based on Debian or Ubuntu with XFCE desktop for ARM processors. Some default configsuser: rootpass: 1234">
 
 
 
@@ -88,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                <img src="/images/logo.svg" alt="Armbian Introduction" height="28">
             
             </a>
         </div>
@@ -134,34 +136,22 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/categories">Categories</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">spring</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-23T06:11:23.000Z">2019-10-23</time>
+                <time class="level-item has-text-grey" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
+                <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a few seconds read (About 93 words)
                 </span>
                 
                 
@@ -170,65 +160,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/10/23/spring-authorize-jwt/">Spring Security Authorization with JWT</a>
+                Armbian Introduction
             
         </h1>
         <div class="content">
-            
+            <h2 id="Armbian-documentation"><a href="#Armbian-documentation" class="headerlink" title="Armbian documentation"></a>Armbian documentation</h2><ul>
+<li><a href="https://docs.armbian.com/" target="_blank" rel="noopener">Armbian Home Page</a></li>
+</ul>
+<h2 id="What-is-Armbian"><a href="#What-is-Armbian" class="headerlink" title="What is Armbian?"></a>What is Armbian?</h2><p>Armbian is a lightweight Linux distro based on Debian or Ubuntu with XFCE desktop for ARM processors.</p>
+<h2 id="Some-default-configs"><a href="#Some-default-configs" class="headerlink" title="Some default configs"></a>Some default configs</h2><p>user: root<br>pass: 1234</p>
+<p>Please, look at “Performance tweaks” section, and if needed disable swap to boost the performance.</p>
+<p>Hardware info:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/armhwinfo</span><br></pre></td></tr></table></figure>
+<h2 id="Change-Boot-Settings"><a href="#Change-Boot-Settings" class="headerlink" title="Change Boot Settings"></a>Change Boot Settings</h2><p>You should modify following file:</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/boot/armbianEnv.text</span><br></pre></td></tr></table></figure>
+<h2 id="Look-at-CPU-temperature"><a href="#Look-at-CPU-temperature" class="headerlink" title="Look at CPU temperature"></a>Look at CPU temperature</h2><p>Proprt cooling is need for boards with A64 processors. Keep eye on CPU usage by command: </p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo armbianmonitor -r</span><br></pre></td></tr></table></figure>
+
         </div>
         
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-10-22T12:09:21.000Z">2019-10-22</time>
-                
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/ARM/">ARM</a>, <a class="has-link-grey -link" href="/tags/Armbian/">Armbian</a>
                 </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 minutes read (About 651 words)
-                </span>
-                
-                
             </div>
         </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/10/22/keycloak-sping-boot/">Connect Spring Boot-2.x to Keycloak-4.6</a>
-            
-        </h1>
-        <div class="content">
-            <ol>
-<li>Add following dependency to pom.xml<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.keycloak.bom<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>keycloak-adapter-bom<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.6.0.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>pom<span class="hljs-tag">&lt;/<span class="hljs-name">type</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>import<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.keycloak<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>keycloak-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> org.kodnuts.common.web.filter.CorsFilter;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.KeycloakConfigResolver;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.KeycloakSecurityComponents;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.authentication.KeycloakAuthenticationProvider;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.client.KeycloakClientRequestFactory;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.client.KeycloakRestTemplate;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.config.KeycloakWebSecurityConfigurerAdapter;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.config.ConfigurableBeanFactory;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Scope;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.http.HttpMethod;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.builders.HttpSecurity;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.core.authority.mapping.SimpleAuthorityMapper;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.core.session.SessionRegistryImpl;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.web.access.channel.ChannelProcessingFilter;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.web.authentication.session.SessionAuthenticationStrategy;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.util.StringUtils;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-meta">@EnableWebSecurity</span></span><br><span class="line"><span class="hljs-meta">@ComponentScan</span>(basePackageClasses = KeycloakSecurityComponents.class)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityConfig</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">KeycloakWebSecurityConfigurerAdapter</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    <span class="hljs-keyword">public</span> KeycloakClientRequestFactory keycloakClientRequestFactory;</span><br><span class="line">    <span class="hljs-meta">@Value</span>(<span class="hljs-string">"$&#123;spring.http.allowedOrigins:&#125;"</span>)</span><br><span class="line">    <span class="hljs-keyword">private</span> String allowedOrigins;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configureGlobal</span><span class="hljs-params">(AuthenticationManagerBuilder auth)</span> </span>&#123;</span><br><span class="line">        KeycloakAuthenticationProvider keycloakAuthenticationProvider = keycloakAuthenticationProvider();</span><br><span class="line">        SimpleAuthorityMapper grantedAuthorityMapper = <span class="hljs-keyword">new</span> SimpleAuthorityMapper();</span><br><span class="line">        grantedAuthorityMapper.setPrefix(<span class="hljs-string">"ROLE_"</span>);</span><br><span class="line">        keycloakAuthenticationProvider.setGrantedAuthoritiesMapper(grantedAuthorityMapper);</span><br><span class="line">        auth.authenticationProvider(keycloakAuthenticationProvider);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-meta">@Scope</span>(ConfigurableBeanFactory.SCOPE_PROTOTYPE)</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> KeycloakRestTemplate <span class="hljs-title">keycloakRestTemplate</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> KeycloakRestTemplate(keycloakClientRequestFactory);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> SessionAuthenticationStrategy <span class="hljs-title">sessionAuthenticationStrategy</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> RegisterSessionAuthenticationStrategy(<span class="hljs-keyword">new</span> SessionRegistryImpl());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> KeycloakConfigResolver <span class="hljs-title">KeycloakConfigResolver</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> KeycloakSpringBootConfigResolver();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">configure</span><span class="hljs-params">(HttpSecurity http)</span> <span class="hljs-keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.configure(http);</span><br><span class="line">        http</span><br><span class="line">                .csrf().disable()</span><br><span class="line">                .authorizeRequests()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/favicon.ico"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/change-lang"</span>).permitAll()</span><br><span class="line">                <span class="hljs-comment">//</span></span><br><span class="line">                .antMatchers(<span class="hljs-string">"/"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/js/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/css/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/config/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/images/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/fonts/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/lib/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/help/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/**/**.js"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/**/**.css"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/**/**.html"</span>).permitAll()</span><br><span class="line">                <span class="hljs-comment">//Swagger</span></span><br><span class="line">                .antMatchers(<span class="hljs-string">"/swagger-resources/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/swagger-ui.html"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/webjars/**"</span>).permitAll()</span><br><span class="line">                .antMatchers(<span class="hljs-string">"/v2/api-docs"</span>).permitAll()</span><br><span class="line">                .antMatchers(HttpMethod.GET, <span class="hljs-string">"/actuator/health/**"</span>).permitAll()</span><br><span class="line">                .anyRequest().authenticated();</span><br><span class="line">        <span class="hljs-keyword">if</span> (StringUtils.hasText(allowedOrigins)) &#123;</span><br><span class="line">            http.addFilterBefore(<span class="hljs-keyword">new</span> CorsFilter(<span class="hljs-string">"/**"</span>,</span><br><span class="line">                            allowedOrigins,</span><br><span class="line">                            <span class="hljs-string">"POST, GET, OPTIONS, DELETE, PUT"</span>,</span><br><span class="line">                            <span class="hljs-string">"Authorization, Content-Type, Accept, Accept-Language, x-requested-with, Cache-Control, Content-Disposition"</span>,</span><br><span class="line">                            <span class="hljs-keyword">true</span>,</span><br><span class="line">                            <span class="hljs-number">3600</span>)</span><br><span class="line">                    , ChannelProcessingFilter.class);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">#####KeyCloak#####</span></span><br><span class="line">keycloak.realm=Test-Realm</span><br><span class="line">keycloak.auth-server-url=http://192.168.100.111/auth</span><br><span class="line">keycloak.ssl-required=external</span><br><span class="line">keycloak.resource=my-app</span><br><span class="line">keycloak.public-client=true</span><br><span class="line">keycloak.bearer-only=true</span><br><span class="line">keycloak.credentials.secret=c66ac43f-5ceb-449c-a200-6ec67001e80e</span><br></pre></td></tr></table></figure>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> org.kodnuts.common.model.User;</span><br><span class="line"><span class="hljs-keyword">import</span> org.kodnuts.common.security.SecurityContext;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.KeycloakPrincipal;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.adapters.springsecurity.account.SimpleKeycloakAccount;</span><br><span class="line"><span class="hljs-keyword">import</span> org.keycloak.representations.AccessToken;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.core.context.SecurityContextHolder;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.security.Principal;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Component</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SecurityContext</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> User <span class="hljs-title">getUser</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        AccessToken token = <span class="hljs-keyword">null</span>;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            Principal principal = ((SimpleKeycloakAccount) SecurityContextHolder.getContext().getAuthentication().getDetails()).getPrincipal();</span><br><span class="line">            token = ((KeycloakPrincipal) principal).getKeycloakSecurityContext().getToken();</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(e);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">if</span> (token == <span class="hljs-keyword">null</span> || token.getOtherClaims() == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"operation.center.generate.deposit.file.setup.error"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        Long userId = Long.valueOf(token.getOtherClaims().getOrDefault(<span class="hljs-string">"userId"</span>, <span class="hljs-keyword">null</span>).toString());</span><br><span class="line">        Long organId = Long.valueOf(token.getOtherClaims().getOrDefault(<span class="hljs-string">"organId"</span>, <span class="hljs-keyword">null</span>).toString());</span><br><span class="line">        Long organCode = Long.valueOf(token.getOtherClaims().getOrDefault(<span class="hljs-string">"organCode"</span>, <span class="hljs-keyword">null</span>).toString());</span><br><span class="line">        Integer personalCode = Integer.valueOf(token.getOtherClaims().getOrDefault(<span class="hljs-string">"personalCode"</span>, <span class="hljs-keyword">null</span>).toString());</span><br><span class="line">        String mac = token.getOtherClaims().getOrDefault(<span class="hljs-string">"serverMac"</span>, <span class="hljs-keyword">null</span>).toString();</span><br><span class="line">        <span class="hljs-keyword">if</span> (organId == <span class="hljs-keyword">null</span> || userId == <span class="hljs-keyword">null</span> || organCode == <span class="hljs-keyword">null</span> || personalCode == <span class="hljs-keyword">null</span>|| StringUtils.isEmpty(mac)) &#123;</span><br><span class="line">            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"operation.center.generate.deposit.file.setup.error"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        User user = <span class="hljs-keyword">new</span> User(userId);</span><br><span class="line">        user.setOrganId(organId);</span><br><span class="line">        user.setOrganCode(organCode);</span><br><span class="line">        user.setPersonalCode(personalCode);</span><br><span class="line">        user.setMac(mac);</span><br><span class="line">        <span class="hljs-keyword">return</span> user;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Data</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> Long id;</span><br><span class="line">    <span class="hljs-keyword">private</span> String userName;</span><br><span class="line">    <span class="hljs-keyword">private</span> String password;</span><br><span class="line">    <span class="hljs-keyword">private</span> String firstName;</span><br><span class="line">    <span class="hljs-keyword">private</span> String lastName;</span><br><span class="line">    <span class="hljs-keyword">private</span> Object status;</span><br><span class="line">    <span class="hljs-keyword">private</span> Byte statusCode;</span><br><span class="line">    <span class="hljs-keyword">private</span> String keycloakId;</span><br><span class="line">    <span class="hljs-keyword">private</span> String email;</span><br><span class="line">    <span class="hljs-keyword">private</span> Object organ;</span><br><span class="line">    <span class="hljs-keyword">private</span> Long organId;</span><br><span class="line">    <span class="hljs-keyword">private</span> Long organCode;</span><br><span class="line">    <span class="hljs-keyword">private</span> Integer personalCode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        </div>
-        
         
         
     </div>
@@ -238,111 +197,26 @@
 
 
 
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T09:53:55.000Z">2019-09-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 66 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/30/spring-jpa-config/">Common Spring JPA Config</a>
-            
-        </h1>
-        <div class="content">
-            <h2 id="Add-JPA-data-source-with-granule-logging-enabled"><a href="#Add-JPA-data-source-with-granule-logging-enabled" class="headerlink" title="Add JPA data source with granule logging enabled"></a>Add JPA data source with granule logging enabled</h2><figure class="highlight hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url= jdbc:oracle:thin:@&lt;db&gt;:&lt;port&gt;:&lt;sid&gt;</span><br><span class="line">spring.datasource.username=&lt;user_name&gt;</span><br><span class="line">spring.datasource.password=&lt;password&gt;</span><br><span class="line">spring.datasource.driver-class-name=oracle.jdbc.OracleDriver</span><br><span class="line"></span><br><span class="line">spring.jpa.hibernate.ddl-auto=none</span><br><span class="line">spring.jpa.generate-ddl=false</span><br><span class="line">spring.jpa.show-sql=true</span><br><span class="line"></span><br><span class="line">logging.level.org.hibernate.SQL=debug</span><br><span class="line">logging.level.org.hibernate.type.descriptor.sql=trace</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Last two configs are specific to Hibernates.</p>
-</blockquote>
-
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/29/armbian-orangepione-qemu/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Running Armbian on QEMU for OrangePi One Plus</span>
+            </a>
         </div>
         
         
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/29/setup-qemu-aarch64/">
+                <span class="level-item">Setup QEMU for ARM 64</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
         
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-09-30T09:38:29.000Z">2019-09-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a minute read (About 185 words)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/09/30/spring-cloud-jaeger/">Spring Cloud with Jaeger</a>
-            
-        </h1>
-        <div class="content">
-            <p>Jaeger is an implementation of OpenTracing API which is written in go hence has a very good performance. The other well-known implementation is Zipkin which is developed by Netflix in Java.</p>
-<ol>
-<li><p>Running jaeger server</p>
-<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name jaeger \</span><br><span class="line">  -e COLLECTOR_ZIPKIN_HTTP_PORT=9411 \</span><br><span class="line">  -p 5775:5775/udp \</span><br><span class="line">  -p 6831:6831/udp \</span><br><span class="line">  -p 6832:6832/udp \</span><br><span class="line">  -p 5778:5778 \</span><br><span class="line">  -p 16686:16686 \</span><br><span class="line">  -p 14268:14268 \</span><br><span class="line">  -p 9411:9411 \</span><br><span class="line">  jaegertracing/all-in-one</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Adding jaeger support to spring cloud<br>Add this dependency into the pom.xml:</p>
-<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- OpenTracing Tracing &amp; Jaeger --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-spring-cloud-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>0.3.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line">    <span class="hljs-comment">&lt;!-- Exclude the modules that you don't want to trace or instrument --&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-spring-cloud-jdbc-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-jms-1<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.opentracing.contrib<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>opentracing-jms-spring<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">exclusions</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.jaegertracing<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jaeger-client<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Create configuration bean</p>
-</li>
-</ol>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> io.jaegertracing.internal.samplers.ProbabilisticSampler;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Configuration</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TraceConfig</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@Bean</span></span><br><span class="line">    <span class="hljs-keyword">public</span> io.opentracing.<span class="hljs-function">Tracer <span class="hljs-title">tracer</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> io.jaegertracing.Configuration(<span class="hljs-string">"manger-dashboard"</span>)</span><br><span class="line">                .withSampler(<span class="hljs-keyword">new</span> io.jaegertracing.Configuration.SamplerConfiguration().withType(ProbabilisticSampler.TYPE).withParam(<span class="hljs-number">1</span>))</span><br><span class="line">                .withReporter(<span class="hljs-keyword">new</span> io.jaegertracing.Configuration.ReporterConfiguration())</span><br><span class="line">                .getTracer();</span><br><span class="line">        <span class="hljs-comment">//return new // tracer instance of your choice (Zipkin, Jaeger, LightStep)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
 
 
 </div>
@@ -1606,7 +1480,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="A place for sharing ideas" height="28">
+                    <img src="/images/logo.svg" alt="Armbian Introduction" height="28">
                 
                 </a>
                 <p class="is-size-7">

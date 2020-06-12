@@ -2,22 +2,23 @@
 <html>
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-<title>armbian-orangepione-qemu - A place for sharing ideas</title>
+<title>Running Armbian on QEMU for OrangePi One Plus - A place for sharing ideas</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="A blog of interesting articles about software development, open source, IT trends.">
+    <meta name="description" content="Board HardwareOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one">
+<meta name="keywords" content="ARM,QEMU">
 <meta property="og:type" content="article">
-<meta property="og:title" content="armbian-orangepione-qemu">
+<meta property="og:title" content="Running Armbian on QEMU for OrangePi One Plus">
 <meta property="og:url" content="http://javadsabbagh.github.com/2020/05/29/armbian-orangepione-qemu/index.html">
 <meta property="og:site_name" content="A place for sharing ideas">
-<meta property="og:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta property="og:description" content="Board HardwareOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-29T15:08:58.103Z">
+<meta property="og:updated_time" content="2020-05-29T23:01:38.887Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="armbian-orangepione-qemu">
-<meta name="twitter:description" content="A blog of interesting articles about software development, open source, IT trends.">
+<meta name="twitter:title" content="Running Armbian on QEMU for OrangePi One Plus">
+<meta name="twitter:description" content="Board HardwareOur board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.  NoteThere are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one">
 
 
 
@@ -89,7 +90,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="armbian-orangepione-qemu" height="28">
+                <img src="/images/logo.svg" alt="Running Armbian on QEMU for OrangePi One Plus" height="28">
             
             </a>
         </div>
@@ -142,11 +143,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a minute read (About 142 words)
                 </span>
                 
                 
@@ -155,11 +160,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                armbian-orangepione-qemu
+                Running Armbian on QEMU for OrangePi One Plus
             
         </h1>
         <div class="content">
-            
+            <h2 id="Board-Hardware"><a href="#Board-Hardware" class="headerlink" title="Board Hardware"></a>Board Hardware</h2><p>Our board (Orange Pi One Plus) leverages Allwiner H6 which is a 64-bit (Cortex A53) ARM processor.</p>
+<blockquote>
+<p><strong>Note</strong><br>There are different Cortext-A53 implementations, and Allwinner (Sunnix) H6 is one of them.</p>
+</blockquote>
+<h2 id="Write-Armbian-on-SD-Card"><a href="#Write-Armbian-on-SD-Card" class="headerlink" title="Write Armbian on SD-Card"></a>Write Armbian on SD-Card</h2><p>Prepare SD card (four methodes):</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">zcat Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz | pv | dd of=/dev/mmcblkX bs=1M</span><br><span class="line">dd <span class="hljs-keyword">if</span>=Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img of=/dev/mmcblkX bs=1M </span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img.gz -d /dev/mmcblkX</span><br><span class="line">balena-etcher Armbian_20.02.1_Orangepioneplus_buster_current_5.4.20.img -d /dev/mmcblkX</span><br></pre></td></tr></table></figure>
+<h2 id="Remove-CPU-frequency-limit-for-H6"><a href="#Remove-CPU-frequency-limit-for-H6" class="headerlink" title="Remove CPU frequency limit for H6"></a>Remove CPU frequency limit for H6</h2><p>Default setting for CPU frequency is as follows:</p>
+<figure class="highlight sh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CPU configuration: 480000 - 1810000 with ondemand</span><br></pre></td></tr></table></figure>
+<p>The H6 CPU frequency has ben soft-capped at 1,48 GHz to avoid thermal throttling too fast. This limit can be lifted by editing /etc/default/cpufrequtils and set MAX_SPEED to 1810000.</p>
+
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/ARM/">ARM</a>, <a class="has-link-grey -link" href="/tags/QEMU/">QEMU</a>
+                </div>
+            </div>
         </div>
         
         
@@ -176,8 +199,8 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/29/armbian/">
-                <span class="level-item">Armbian</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/29/armbian-introduction/">
+                <span class="level-item">Armbian Introduction</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -249,7 +272,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        37
+                        38
                     </p>
                 </div>
             </div>
@@ -384,7 +407,7 @@
                 <span class="level-item">embedded</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/groovy/">
@@ -422,7 +445,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/ARM/" style="font-size: 10px;">ARM</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI-CD</a> <a href="/tags/JDK/" style="font-size: 10px;">JDK</a> <a href="/tags/QEMU/" style="font-size: 10px;">QEMU</a> <a href="/tags/blogging/" style="font-size: 20px;">blogging</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/groovy/" style="font-size: 10px;">groovy</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hibernate/" style="font-size: 10px;">hibernate</a> <a href="/tags/jaeger/" style="font-size: 10px;">jaeger</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javafx/" style="font-size: 20px;">javafx</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/jmeter/" style="font-size: 10px;">jmeter</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jwt/" style="font-size: 15px;">jwt</a> <a href="/tags/keycloak/" style="font-size: 20px;">keycloak</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/mxnet/" style="font-size: 15px;">mxnet</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 20px;">spring</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring-cloud</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/testing/" style="font-size: 10px;">testing</a> <a href="/tags/tracing/" style="font-size: 10px;">tracing</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a>
+        <a href="/tags/ARM/" style="font-size: 20px;">ARM</a> <a href="/tags/Armbian/" style="font-size: 10px;">Armbian</a> <a href="/tags/CI-CD/" style="font-size: 10px;">CI-CD</a> <a href="/tags/JDK/" style="font-size: 10px;">JDK</a> <a href="/tags/QEMU/" style="font-size: 15px;">QEMU</a> <a href="/tags/blogging/" style="font-size: 20px;">blogging</a> <a href="/tags/boost/" style="font-size: 10px;">boost</a> <a href="/tags/cmake/" style="font-size: 10px;">cmake</a> <a href="/tags/cpp/" style="font-size: 10px;">cpp</a> <a href="/tags/debian/" style="font-size: 10px;">debian</a> <a href="/tags/groovy/" style="font-size: 10px;">groovy</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/hibernate/" style="font-size: 10px;">hibernate</a> <a href="/tags/jaeger/" style="font-size: 10px;">jaeger</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/javafx/" style="font-size: 20px;">javafx</a> <a href="/tags/jenkins/" style="font-size: 10px;">jenkins</a> <a href="/tags/jmeter/" style="font-size: 10px;">jmeter</a> <a href="/tags/jpa/" style="font-size: 10px;">jpa</a> <a href="/tags/jwt/" style="font-size: 15px;">jwt</a> <a href="/tags/keycloak/" style="font-size: 20px;">keycloak</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/logging/" style="font-size: 10px;">logging</a> <a href="/tags/mxnet/" style="font-size: 15px;">mxnet</a> <a href="/tags/netbeans/" style="font-size: 10px;">netbeans</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/proxy/" style="font-size: 10px;">proxy</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/security/" style="font-size: 15px;">security</a> <a href="/tags/shell/" style="font-size: 10px;">shell</a> <a href="/tags/spring/" style="font-size: 20px;">spring</a> <a href="/tags/spring-cloud/" style="font-size: 10px;">spring-cloud</a> <a href="/tags/ssh/" style="font-size: 15px;">ssh</a> <a href="/tags/testing/" style="font-size: 10px;">testing</a> <a href="/tags/tracing/" style="font-size: 10px;">tracing</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/vscode/" style="font-size: 10px;">vscode</a> <a href="/tags/zsh/" style="font-size: 10px;">zsh</a>
     </div>
 </div>
 
@@ -441,16 +464,16 @@
             
             <a href="/2020/05/29/armbian-orangepione-qemu/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="armbian-orangepione-qemu">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Running Armbian on QEMU for OrangePi One Plus">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time></div>
-                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">armbian-orangepione-qemu</a>
+                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">Running Armbian on QEMU for OrangePi One Plus</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                     </p>
                 </div>
             </div>
@@ -458,18 +481,18 @@
         
         <article class="media">
             
-            <a href="/2020/05/29/armbian/" class="media-left">
+            <a href="/2020/05/29/armbian-introduction/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian Introduction">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time></div>
-                    <a href="/2020/05/29/armbian/" class="has-link-black-ter is-size-6">Armbian</a>
+                    <a href="/2020/05/29/armbian-introduction/" class="has-link-black-ter is-size-6">Armbian Introduction</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                     </p>
                 </div>
             </div>
@@ -659,6 +682,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ARM/">
                         <span class="tag">ARM</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Armbian/">
+                        <span class="tag">Armbian</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -680,7 +710,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/QEMU/">
                         <span class="tag">QEMU</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -942,16 +972,16 @@
             
             <a href="/2020/05/29/armbian-orangepione-qemu/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="armbian-orangepione-qemu">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Running Armbian on QEMU for OrangePi One Plus">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T15:08:58.000Z">2020-05-29</time></div>
-                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">armbian-orangepione-qemu</a>
+                    <a href="/2020/05/29/armbian-orangepione-qemu/" class="has-link-black-ter is-size-6">Running Armbian on QEMU for OrangePi One Plus</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                     </p>
                 </div>
             </div>
@@ -959,18 +989,18 @@
         
         <article class="media">
             
-            <a href="/2020/05/29/armbian/" class="media-left">
+            <a href="/2020/05/29/armbian-introduction/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Armbian Introduction">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-05-29T11:17:40.000Z">2020-05-29</time></div>
-                    <a href="/2020/05/29/armbian/" class="has-link-black-ter is-size-6">Armbian</a>
+                    <a href="/2020/05/29/armbian-introduction/" class="has-link-black-ter is-size-6">Armbian Introduction</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/embedded/">embedded</a>
                     </p>
                 </div>
             </div>
@@ -1160,6 +1190,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/ARM/">
                         <span class="tag">ARM</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Armbian/">
+                        <span class="tag">Armbian</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -1181,7 +1218,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/QEMU/">
                         <span class="tag">QEMU</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1433,7 +1470,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="armbian-orangepione-qemu" height="28">
+                    <img src="/images/logo.svg" alt="Running Armbian on QEMU for OrangePi One Plus" height="28">
                 
                 </a>
                 <p class="is-size-7">
